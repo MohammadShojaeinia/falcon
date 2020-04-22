@@ -2,14 +2,14 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
 
 const authRoute = require('../backend/routes/auth')
 
 //connect to database
-dotenv.config();
+// dotenv.config();
 mongoose.connect(
-    process.env.DB_CONNECT, { useNewUrlParser: true }, () =>
+    process.env['DB_CONNECT'], { useNewUrlParser: true }, () =>
     console.log('connected to db!')
 );
 

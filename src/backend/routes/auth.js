@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 const { registerValidation } = require('../../validation/registervalid');
 
 
-const User = require('../models/User');
+// const User = require('../models/User');
 
 
 /*router.post('/api/register', (req, res) => {
